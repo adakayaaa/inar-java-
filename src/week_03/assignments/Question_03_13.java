@@ -16,7 +16,8 @@ public class Question_03_13 {
         double tax = 0;
 
         if (status == 0) {
-            if (income <= 8350) tax = income * 0.10;
+            if (income <= 8350)
+                tax = income * 0.10;
             else if (income <= 33950)
                 tax = 8350 * 0.10 + (income - 8350) * 0.15;
             else if (income <= 82250)
