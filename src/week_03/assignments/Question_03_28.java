@@ -1,7 +1,9 @@
 package week_03.assignments;
+
 import java.util.*;
+
 public class Question_03_28 {
-    public static void main (String [] args) {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter r1's center x-, y-coordinates, width, and height: ");
@@ -16,10 +18,27 @@ public class Question_03_28 {
         double width2 = input.nextDouble();
         double height2 = input.nextDouble();
 
-        double centerDistance = Math.pow (Math.pow( (r1CenterX-r2CenterX),2) +  Math.pow( (r1CenterY-r2CenterY),2),2);
 
 
+        /*Hint: A point is in the rectangle
+        if its horizontal distance to r2CenterX-r1CenterX  is less than or equal to widht1/2 and its
+        vertical distance to r2CenterY-r1CenterY is less than or equal to height1/2
+        */
+        if ( (Math.abs ( r2CenterX-r1CenterX )<= width1/2 ) &&  (Math.abs (r2CenterY-r1CenterY)<= height1/2 ) &&
+                (((width2 < width1) || (width2 < height1)) && ((height2 < height1) || (height2 < width1)))) {
+            System.out.println(" r2 is inside r1 ");
 
+            // We calculate the else-if by considering the coordinates of the corner points of the rectangles.
+            // dikdörtgenlerin köşe noktalarının koordinatlarını düşünerek else-if hesaplıyoruz.
+        } else if ((r2CenterX - width2 / 2 > r1CenterX + width1 / 2)
+                || (r2CenterX + width2 / 2 < r1CenterX - width1 / 2)
+                || (r1CenterY + height1 / 2 < r2CenterY - height2 / 2)
+                || (r1CenterY - height1 / 2 > r2CenterY + height2 / 2)) {
+            System.out.println(" r2 does not overlap r1 ");
+
+        } else {
+            System.out.println(" r2 overlaps r1");
+        }
 
     }
 }
