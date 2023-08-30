@@ -9,7 +9,7 @@ public class Question_04_12 {
 
         String hexDigit = input.nextLine();
 
-        if( hexDigit.length() != 1){
+        if (hexDigit.length() != 1) {
             System.out.println("You must enter one character ");
             System.exit(1);
         }
@@ -56,7 +56,7 @@ public class Question_04_12 {
             }
 
         } else {
-            System.out.println( character + " is an invalid input");
+            System.out.println(character + " is an invalid input");
         }
     }
 }
