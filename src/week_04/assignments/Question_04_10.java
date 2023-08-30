@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Question_04_10 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in) ;
+        Scanner input = new Scanner(System.in);
 
         String set1 =
                 "1 3 5 7\n" +
@@ -39,43 +39,46 @@ public class Question_04_10 {
         int day = 0;
         System.out.println("Is your birthday in Set1?\n");
         System.out.println(set1);
-        System.out.println("\nEnter 0 for No and 1 for Yes: ");
-        int answer = input.nextInt();
+        System.out.println("\nEnter N for No and Y for Yes: ");
+        String answer = input.nextLine();
+        char ch = answer.charAt(0);
 
-        if( answer == 1) {
-            day +=1;
-        }
+        if (ch == 'Y')
+            day += 1;
+
         System.out.println("Is your birthday in Set2?\n");
         System.out.println(set2);
-        System.out.println("\nEnter 0 for No and 1 for Yes: ");
-        answer = input.nextInt();
-        if (answer == 1)
+        System.out.println("\nEnter N for No and Y for Yes: ");
+        answer = input.nextLine();
+        ch = answer.charAt(0);
+        if (ch == 'Y')
             day += 2;
 
         System.out.println("Is your birthday in Set3?\n");
         System.out.println(set3);
-        System.out.println("\nEnter 0 for No and 1 for Yes: ");
-        answer = input.nextInt();
-        if (answer == 1)
+        System.out.println("\nEnter N for No and Y for Yes: ");
+        answer = input.nextLine();
+        ch = answer.charAt(0);
+        if (ch == 'Y')
             day += 4;
 
         System.out.println("Is your birthday in Set4?\n");
         System.out.println(set4);
-        System.out.println("\nEnter 0 for No and 1 for Yes: ");
-        answer = input.nextInt();
-        if (answer == 1)
+        System.out.println("\nEnter N for No and Y for Yes: ");
+        answer = input.nextLine();
+        ch = answer.charAt(0);
+        if (ch == 'Y')
             day += 8;
 
         System.out.println("Is your birthday in Set5?\n");
         System.out.println(set5);
-        System.out.println("\nEnter 0 for No and 1 for Yes: ");
-        answer = input.nextInt();
-        if (answer == 1)
+        System.out.println("\nEnter N for No and Y for Yes: ");
+        answer = input.nextLine();
+        ch = answer.charAt(0);
+        if (ch == 'Y')
             day += 16;
 
         System.out.println("\n Your birthday is " + day + "!");
-
-
 
 
     }
