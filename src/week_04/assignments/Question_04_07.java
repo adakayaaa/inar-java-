@@ -6,7 +6,6 @@ public class Question_04_07 {
 
         System.out.println("Enter the radius of the bounding circle: ");
         double radius = input.nextDouble();
-        double angle = 72;
 
         double x1 = radius * (Math.cos(Math.PI/10));
         double y1 = radius * (Math.sin(Math.PI/10));
