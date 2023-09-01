@@ -8,21 +8,21 @@ public class Question_04_07 {
         double radius = input.nextDouble();
         double angle = 72;
 
-        double x1 = radius * Math.cos(angle);
-        double y1 = radius * Math.sin(18);
+        double x1 = radius * (Math.cos(Math.PI/10));
+        double y1 = radius * (Math.sin(Math.PI/10));
 
 
-        double x2 = radius * Math.cos(0);
-        double y2 = radius * Math.sin(0);
+        double x2 = radius * (Math.cos(Math.PI/2));
+        double y2 = radius * (Math.sin(Math.PI/2));
 
-        double x3 = radius * Math.cos(18);
-        double y3 = radius * Math.sin(18);
+        double x3 = radius * (Math.cos(9*Math.PI/10));
+        double y3 = radius * (Math.sin(9*Math.PI/10));
 
-        double x4 = radius * Math.cos(54);
-        double y4= radius * Math.sin(54);
+        double x4 = radius * (Math.cos(13*Math.PI/10));
+        double y4= radius * (Math.sin(13*Math.PI/10));
 
-        double x5 = radius * Math.cos(54);
-        double y5 = radius * Math.sin(54);
+        double x5 = radius * (Math.cos(17*Math.PI/10));
+        double y5 = radius * (Math.sin(17*Math.PI/10));
 
         System.out.println("The coordinates of five points on the pentagon are" ) ;
         System.out.println( "(" + x1 + "," +y1 + ")" ) ;
