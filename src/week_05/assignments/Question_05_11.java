@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Question_05_11 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+
         int numberCount = 0;
 
         for (int number = 100;  number <= 200; number++) {
