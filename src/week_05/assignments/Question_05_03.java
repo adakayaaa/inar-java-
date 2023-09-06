@@ -8,18 +8,12 @@ public class Question_05_03 {
         int number = 1;
         double poundsPerKilogram = 2.2;
 
-        System.out.println(" Kilograms             Pounds");
+        System.out.println(" Kilograms              Pounds");
         while (number < 200) {
 
             double kilogram = number * poundsPerKilogram;
-            System.out.print(number);
-            if (number < 11) {
-                System.out.println("                        "+ kilogram);
-            } else if (11 <= number && number < 101) {
-                System.out.println("                       " + kilogram);
-            } else {
-                System.out.println("                      " + kilogram);
-            }
+
+            System.out.printf("\t%-10d%15.2f\n",number,kilogram);
             number += 2;
 
 
