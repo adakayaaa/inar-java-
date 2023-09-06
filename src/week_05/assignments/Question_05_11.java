@@ -7,7 +7,7 @@ public class Question_05_11 {
         Scanner input = new Scanner(System.in);
         int numberCount = 0;
 
-        for (int number = 100; 100 <= number && number <= 200; number++) {
+        for (int number = 100;  number <= 200; number++) {
             if ((number % 5 == 0 && number % 6 != 0) || (number % 5 != 0 && number % 6 == 0)) {
                 System.out.printf("%-4d", number);
                 numberCount++;

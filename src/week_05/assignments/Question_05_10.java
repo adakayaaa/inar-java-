@@ -7,7 +7,7 @@ public class Question_05_10 {
         Scanner input = new Scanner(System.in);
         int numberCount = 0;
 
-        for (int number = 101; 100 < number && number < 1000; number++) {
+        for (int number = 101;  number < 1000; number++) {
             if (number % 5 == 0 && number % 6 == 0) {
                 System.out.print(" " + number + " ");
                 numberCount++;

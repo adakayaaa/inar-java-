@@ -1,4 +1,4 @@
 package week_05.assignments;
 
-public class Quesiton_05_14 {
+public class Question_05_14 {
 }
