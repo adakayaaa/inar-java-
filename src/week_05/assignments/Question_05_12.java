@@ -8,10 +8,9 @@ public class Question_05_12 {
         int number = 1;
 
         while (Math.pow(number, 2) < 12000) {
-
             number++;
+            System.out.println("The smallest n is -" + number);
         }
-        System.out.println("The smallest n is -" + number);
     }
 }
 
