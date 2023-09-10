@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Question_05_28 {
     // something is wrong-> month august
+    // think new something
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter year (e.g.2012) : ");
