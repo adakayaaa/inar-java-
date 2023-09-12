@@ -1,29 +1,25 @@
-package week_05.assignments;
+package week_05.live_class;
 
 import java.util.Scanner;
 
-public class Question_05_28 {
+public class Exercise {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter year (e.g.2012) : ");
+        System.out.print("Enter year: ");
         int year = input.nextInt();
 
-        System.out.print("Enter fist day of the year: ");
+        System.out.print(" Enter first day of the year: ");
         int day = input.nextInt();
 
         for (int month = 1; month <= 12; month++) {
-
             if (month == 2 || month == 4 || month == 6 || month == 8 || month == 9 || month == 11) {
                 day += 3;
-
-            } else if (month == 5 || month == 7 ||  month == 10 || month == 12) {
+            } else if (month == 5 || month == 7 || month == 10 || month == 12) {
                 day += 2;
 
             } else if (month == 3) {
                 if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
                     day += 1;
-                } else {
-                    day += 0;
                 }
             }
             switch (month) {
@@ -63,23 +59,31 @@ public class Question_05_28 {
                 case 12:
                     System.out.print("December 1 " + year + " is ");
             }
-
             switch (day % 7) {
-                case 0: System.out.println(" Sunday");
+                case 0:
+                    System.out.println(" Sunday");
                     break;
-                case 1: System.out.println(" Monday");
+                case 1:
+                    System.out.println(" Monday");
                     break;
-                case 2: System.out.println(" Tuesday");
+                case 2:
+                    System.out.println(" Tuesday");
                     break;
-                case 3: System.out.println(" Wednesday");
+                case 3:
+                    System.out.println(" Wednesday");
                     break;
-                case 4: System.out.println(" Thursday");
+                case 4:
+                    System.out.println(" Thursday");
                     break;
-                case 5: System.out.println(" Friday");
+                case 5:
+                    System.out.println(" Friday");
                     break;
-                case 6: System.out.println(" Saturday");
+                case 6:
+                    System.out.println(" Saturday");
 
             }
+
         }
     }
+
 }
