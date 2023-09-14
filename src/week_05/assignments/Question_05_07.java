@@ -5,16 +5,18 @@ public class Question_05_07 {
         double cost = 10000;
         double totalCost = 0;
         int year = 1;
-        while (year<= 10) {
+        while (year <= 10) {
+            cost = (int) (cost * 1.05);
             year++;
-                cost = (int) (cost * 1.05);
+            }
+        System.out.println("Tuition in ten years " + cost);
 
-        }System.out.println("Tuition in ten years " + cost);
-        while (10<year&& year <= 15){
-            year ++;
-            totalCost += (cost *1.05);
+        while ( year <= 14) {
+            cost= (int)(cost * 1.05);
+            totalCost+= cost;
+            year++;
         }
 
-        System.out.println("Total cost four years' worth of tuition after the tenth year: " + totalCost);
+        System.out.println("Total cost four years' worth of tuition after the tenth year: " + (totalCost));
     }
 }
