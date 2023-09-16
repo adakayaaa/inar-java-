@@ -17,7 +17,7 @@ public class Question_05_36 {
         if (d10 % 11 == 10) {
             System.out.println("The ISBN-10 number is " + number + "X");
         } else {
-            System.out.println("The ISBN-10 number is " + number + "" + d10 % 11);
+            System.out.println("The ISBN-10 number is " + number+ "" + d10 % 11);
         }
     }
 }

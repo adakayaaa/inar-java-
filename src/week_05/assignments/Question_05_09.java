@@ -9,31 +9,30 @@ public class Question_05_09 {
         int numberOfStudents = input.nextInt();
         int student = 1;
 
-        String name1 = " ";
-        String name2 = " ";
-        int score = 0;
-        int score1 = 0;
+        String nameHighestStudent = " ";
+        String nameSecondHighestStudent = " ";
+        int scoreHighest = 0;
+        int scoreSecondHighest = 0;
         System.out.println("Enter each student's name and score ");
 
         while (student <= numberOfStudents) {
             System.out.println("Student: " + student);
             System.out.print("   Name: ");
-            String nameStudent = input.next();
+            String nameOfStudent = input.next();
             System.out.print("  Score: ");
-            int score2 = input.nextInt();
+            int scoreOfStudent = input.nextInt();
 
-            if (score2 > score1) {
-                score =score1;
-                score1 = score2;
+            if (scoreOfStudent> scoreHighest){
+                scoreSecondHighest = scoreHighest;
+                nameSecondHighestStudent = nameHighestStudent;
 
-                name1=nameStudent;
-                name1 = name2;
-
+                scoreHighest= scoreOfStudent;
+                nameHighestStudent = nameOfStudent;
             }
             student++;
 
         }
-        System.out.println("Student with the highest score: " + name1);
-        System.out.println("Student with the second highest score: " + name2);
+        System.out.println("Student with the highest score: " + nameHighestStudent);
+        System.out.println("Student with the second highest score: " + nameSecondHighestStudent);
     }
 }
