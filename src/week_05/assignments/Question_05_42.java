@@ -13,7 +13,7 @@ public class Question_05_42 {
         for(double i=10000; i>= 10000; i+=0.01) {
             if (sum + ((i - 10000.0) * 0.12) >= commissionSought) {
 
-                System.out.printf("%s%.2f", "Minimum sales to earn $30000: ", i);
+                System.out.printf("%s%.2f", "Minimum sales to earn $" +commissionSought + ": $", i);
                 break;
             }
         }
