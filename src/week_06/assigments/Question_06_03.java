@@ -22,11 +22,11 @@ public class Question_06_03 {
     public static boolean isPalindrome(int number) {
         String numberNew = number + "";
         String output = "";
-        for (int i = numberNew.length()-1; i >= 0; i--) {
+        for (int i = numberNew.length() - 1; i >= 0; i--) {
             output += numberNew.charAt(i);
         }
-        if (numberNew.compareTo(output) !=0) {
-                return false;
+        if (numberNew.compareTo(output) != 0) {
+            return false;
         }
         return true;
     }

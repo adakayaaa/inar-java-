@@ -8,14 +8,14 @@ public class Question_06_09 {
 
         double feet = 1;
         double meter = 20;
-        while (feet<= 10 && meter <= 65) {
+        while (feet <= 10 && meter <= 65) {
             System.out.printf("%-10.1f %-10.3f   |       %-10.1f%-10.3f"
                     , feet,
-                   footToMeter(feet),
+                    footToMeter(feet),
                     meter,
                     meterToFoot(meter));
-           feet ++;
-            meter+= 5;
+            feet++;
+            meter += 5;
             System.out.println();
         }
 

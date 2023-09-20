@@ -20,7 +20,7 @@ public class Question_06_05 {
         double tempMin = Math.min(num1, num2);
         double min = Math.min(tempMin, num3);
 
-        double mid ;
+        double mid;
         if (num1 != max && num1 != min) {
             mid = num1;
 
@@ -31,6 +31,6 @@ public class Question_06_05 {
             mid = num3;
         }
 
-        System.out.println(min +" " +  mid  +" " + max);
+        System.out.println(min + " " + mid + " " + max);
     }
 }

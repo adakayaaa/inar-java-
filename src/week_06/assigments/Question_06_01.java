@@ -11,7 +11,7 @@ public class Question_06_01 {
         int count = 0;
 
         while (count < numberCountsOfPentagonal) {
-            System.out.printf("%7d",  (number * (3 * number - 1) / 2));
+            System.out.printf("%7d", (number * (3 * number - 1) / 2));
             count++;
 
             if (count % 10 == 0) {
@@ -19,6 +19,6 @@ public class Question_06_01 {
             }
             number++;
         }
-       return number;
+        return number;
     }
 }
