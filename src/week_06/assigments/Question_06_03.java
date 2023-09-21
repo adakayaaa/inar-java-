@@ -7,14 +7,15 @@ public class Question_06_03 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter an integer: ");
         int number = input.nextInt();
-        reverse(number);
+        int reserve = reverse(number);
+
     }
 
     public static int reverse(int number) {
         if (isPalindrome(number)) {
-            System.out.print(number + " is a palindrome");
+            System.out.println(number + " is a palindrome");
         } else {
-            System.out.print(number + " is not a palindrome");
+            System.out.println(number + " is not a palindrome");
         }
         return number;
     }

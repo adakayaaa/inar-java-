@@ -2,8 +2,8 @@ package week_06.assigments;
 
 public class Question_06_01 {
     public static void main(String[] args) {
-        System.out.println("The first 100 pentagonal numbers, ten per line: ");
-        getPentagonalNumber(100);
+        System.out.println("The first 100 pentagonal numbers, ten per line: " + getPentagonalNumber(100));
+
     }
 
     public static int getPentagonalNumber(int numberCountsOfPentagonal) {

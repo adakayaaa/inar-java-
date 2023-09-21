@@ -15,14 +15,8 @@ public class Question_06_16 {
 
     public static int numberOfDaysInYear(int year) {
 
-        if (isLeapYear(year)) {
-            return 366;
-        } else {
-            return 365;
-        }
-
+        return isLeapYear(year)? 366 : 365;
     }
-
     public static boolean isLeapYear(int year) {
         if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
             return true;
