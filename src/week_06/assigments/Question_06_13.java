@@ -4,10 +4,9 @@ public class Question_06_13 {
     public static void main(String[] args) {
         System.out.println("i" + "         " + "m(i)");
         System.out.println("-----------------");
-       sum(20);
+        sum(20);
 
     }
-
 
     public static double sum(double i) {
         double number = 1;
