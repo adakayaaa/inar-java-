@@ -16,8 +16,9 @@ public class Question_06_19 {
         double side2 = input.nextDouble();
         double side3 = input.nextDouble();
 
-        System.out.println(MyTriangle.isValid(side1, side2, side3)?
-                "The area of the triangle is " + MyTriangle.area(side1, side2, side3) : "invalid input!" )  ;
+
+        System.out.println(MyTriangle.isValid(side1, side2, side3) ?
+                "The area of the triangle is " + MyTriangle.area(side1, side2, side3) : "invalid input!");
 
     }
 
