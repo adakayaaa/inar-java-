@@ -13,34 +13,34 @@ public class Question_06_18 {
     }
 
     public static boolean IsValidPassword(String password) {
-        if (isLength(password)) {
-            return true;
+        if (!isLength(password)) {
+            return false;
         }
-        if (isOnlyLettersAndDigits(password)) {
-            return true;
+        if (!isOnlyLettersAndDigits(password)) {
+            return false;
         }
-        if (isContainAtLeastTwoDigits(password)) {
-            return true;
+        if (!isContainAtLeastTwoDigits(password)) {
+            return false;
         }
-        return false;
+        return true;
     }
 
     public static boolean isLength(String password) {
-        if (password.length() >= 8) {
-            return true;
-        } else {
+        if (password.length() < 8) {
             return false;
+        } else {
+            return true;
         }
     }
 
     public static boolean isOnlyLettersAndDigits(String password) {
         for (int i = 0; i <= password.length() - 1; i++) {
             char ch = password.charAt(i);
-            if (Character.isLetterOrDigit(ch)) {
-                return true;
+            if (!(Character.isLetterOrDigit(ch))) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public static boolean isContainAtLeastTwoDigits(String password) {
@@ -51,9 +51,9 @@ public class Question_06_18 {
                 count++;
             }
         }
-        if (count == 2) {
-            return true;
+        if (count < 2) {
+            return false;
         }
-        return false;
+        return true;
     }
 }
