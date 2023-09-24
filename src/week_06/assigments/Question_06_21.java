@@ -52,6 +52,32 @@ public class Question_06_21 {
                 || (uppercaseLetter == 'Z') || (uppercaseLetter == 'w') || (uppercaseLetter == 'x') || (uppercaseLetter == 'y')
                 || (uppercaseLetter == 'z')) {
             return 9;
+
+            /* or:
+            public static int getNumber(char uppercaseLetter) {
+               ch= Character.toUpperCase(ch);
+               int result;
+            if(ch >= 'W'){
+            result =9;
+            }else if (ch >= 'W'){
+            result =9;
+                }else if(ch >= 'T'){
+            result =8;
+            }else if(ch >= 'P'){
+            result =7;
+            }else if(ch >= 'M'){
+            result =6;
+            }else if(ch >= 'J'){
+            result =5;
+            }else if(ch >= 'G'){
+            result =4;
+            }else if(ch >= 'D'){
+            result =3;
+            }else{
+            result =2;
+            }
+            return result;
+             */
         }
         return uppercaseLetter;
     }

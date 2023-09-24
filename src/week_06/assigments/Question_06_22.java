@@ -8,23 +8,22 @@ public class Question_06_22 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
-        long number = input.nextInt();
+        long number = input.nextLong();
 
         System.out.println("The approximated square root of " + number + " is: " + sqrt(number));
     }
 
     public static double sqrt(long n) {
-        long lastGuess =1;
+        long lastGuess = 1;
         long nextGuess = (lastGuess + n / lastGuess) / 2;
-        for (lastGuess=1; lastGuess <= n; lastGuess++) {
 
-            if (nextGuess-lastGuess == 0.0001) {
-                return lastGuess;
-            } else {
-                nextGuess = lastGuess;
-            }
+        while (Math.abs(nextGuess - lastGuess) > 0.0000001) {
+
+            lastGuess = nextGuess;
+            nextGuess = (lastGuess + n / lastGuess) / 2;
         }
-        return lastGuess;
+
+        return nextGuess;
     }
 
 }
