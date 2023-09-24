@@ -3,6 +3,7 @@ package week_06.assigments;
 import java.util.Scanner;
 
 public class Question_06_24 {
+    //this question haven't completed yet.
     public static void main(String[] args) {
 
 
