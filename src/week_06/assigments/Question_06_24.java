@@ -1,46 +1,124 @@
 package week_06.assigments;
 
-import java.util.Scanner;
+
+import java.sql.SQLOutput;
 
 public class Question_06_24 {
-    //this question haven't completed yet.
+
     public static void main(String[] args) {
 
+        printCalendar();
 
-        long totalMilliSeconds = System.currentTimeMillis();
-        long totalDays= totalMilliSeconds/1000/60/24;
-        int currentHour = getCurrentHour(totalMilliSeconds);
-        int currentMinute = getCurrentMinute(totalMilliSeconds);
-        int currentSeconds = getCurrentSeconds(totalMilliSeconds);
-        System.out.println("The current time and date is " + (currentHour % 12) +
-                ":" + currentMinute + ":" + currentSeconds +
-                " " + ((currentHour > 12) ? "PM" : "AM"));
     }
 
-    public static int getCurrentSeconds(long milliSeconds) {
-        return getTotalSeconds(milliSeconds) % 60;
+    public static void printCalendar() {
+        System.out.println("Current time and date is: ");
+
+
+        long milliSecond = System.currentTimeMillis();
+
+        int currentSecond = getCurrentSecond(milliSecond);
+        int currentMinute = getCurrentMinute(milliSecond);
+        int currentHour = getCurrentHour(milliSecond);
+        System.out.println(currentHour + " : " + currentMinute + " : " + currentSecond);
+
+        int currentYear = getCurrentYear(milliSecond);
+        int currentMonth = getCurrentMonth(milliSecond);
+        int currentDay = getCurrentDay(milliSecond);
+        System.out.println(currentDay + " / " + currentMonth + " / " + currentYear);
     }
 
-    public static int getTotalSeconds(long milliSeconds) {
-        return (int) (milliSeconds / 1000);
+    public static int getTotalSecond(long milliSecond) {
+        return (int) (milliSecond / 1000);
     }
 
-    public static int getCurrentMinute(long milliSeconds) {
-        return getTotalMinutes(milliSeconds) % 60;
+    public static int getCurrentSecond(long milliSecond) {
+        return getTotalSecond(milliSecond) % 60;
     }
 
-    public static int getTotalMinutes(long milliSeconds) {
-        return getTotalSeconds(milliSeconds) / 60;
+    public static int getCurrentMinute(long milliSecond) {
+        return getTotalMinute(milliSecond) % 60;
     }
 
-    public static int getCurrentHour(long milliSeconds) {
-        return getTotalHour(milliSeconds) % 24;
+    public static int getTotalMinute(long milliSecond) {
+        return getTotalSecond(milliSecond) / 60;
     }
 
-    public static int getTotalHour(long milliSeconds) {
-        return getTotalMinutes(milliSeconds) / 60;
+    public static int getTotalHour(long milliSecond) {
+        return getTotalMinute(milliSecond) / 60;
     }
 
+    public static int getCurrentHour(long milliSecond) {
+        return getTotalHour(milliSecond) % 24;
+    }
+
+    public static int getCurrentYear(long milliSecond) {
+        int totalDay = getTotalDay(milliSecond);
+        int year = 1970;
+
+        while (totalDay >= getTotalInAYear(year)) {
+            totalDay -= getTotalInAYear(year);
+            year++;
+        }
+        return year;
+    }
+
+    public static int getTotalDay(long milliSecond) {
+        return getTotalHour(milliSecond) / 24;
+    }
+
+    public static boolean isLeapYear(int year) {
+        return ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));
+    }
+
+    public static int getTotalInAYear(int year) {
+        return isLeapYear(year) ? 366 : 365;
+    }
+
+    public static int getTotalDayInCurrentYear(long milliSecond) {
+        int totalDay = getTotalDay(milliSecond);
+        int year = 1970;
+
+        while (totalDay >= getTotalInAYear(year)) {
+            totalDay -= getTotalInAYear(year);
+            year++;
+        }
+
+        return totalDay;
+    }
+
+    public static int getCurrentMonth(long milliSecond) {
+        int totalDay = getTotalDayInCurrentYear(milliSecond);
+        int year = getCurrentYear(milliSecond);
+        int month = 1;
+        while (totalDay > numberOfDayInAMonth(year, month)) {
+            totalDay -= numberOfDayInAMonth(year, month);
+            month++;
+        }
+        return month;
+    }
+
+    public static int numberOfDayInAMonth(int year, int month) {
+        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+            return 31;
+        } else if (month == 2) {
+            return isLeapYear(year) ? 29 : 28;
+        } else {
+            return 30;
+        }
+    }
+
+    public static int getCurrentDay(long milliSecond) {
+        int totalDay = getTotalDayInCurrentYear(milliSecond);
+        int currentMonth = getCurrentMonth(milliSecond);
+        int sum = 0;
+        for (int i = 1; i < currentMonth; i++) {
+            sum += numberOfDayInAMonth(getCurrentYear(milliSecond), i);
+        }
+        int currentDay = totalDay - sum + 1;
+        return currentDay;
+    }
 
 }
+
 
