@@ -5,12 +5,14 @@ import java.util.Scanner;
 public class Question_07_01 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
         System.out.print("Enter the number of students: ");
         int number = input.nextInt();
         int[] numberOfStudents = new int[number];
 
         System.out.println("Enter " + number + " scores: ");
         int max = numberOfStudents[0];
+
         for (int i = 0; i < numberOfStudents.length; i++) {
             numberOfStudents[i] = input.nextInt();
             if (numberOfStudents[i] > max) {

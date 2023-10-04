@@ -7,7 +7,7 @@ public class Question_07_03 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the integers between '1' and '100': ");
 
-        int[] inputNumbers = new int[101];
+        int[] inputNumbers = new int[100];
         int count = 0;
         for (int i = 0; i < inputNumbers.length; i++) {
             inputNumbers[i] = input.nextInt();
