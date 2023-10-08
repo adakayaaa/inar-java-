@@ -16,12 +16,13 @@ public class Question_07_13 {
     }
 
     public static int getRandom(int... numbers) {
-        int random = (int) (Math.random()*55+1);
+        int random = (int) (Math.random() * 55 + 1);
 
-        for(int i=0; i< numbers.length;i++){
-        if(numbers[i] == random){
-           random = (int) (Math.random()*55+1);
-        }
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == random) {
+                i = 0;
+                random = (int) (Math.random() * 55 + 1);
+            }
         }
         return random;
     }

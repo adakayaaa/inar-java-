@@ -7,27 +7,25 @@ public class Question_07_03 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the integers between '1' and '100': ");
 
-        int[] inputNumbers = new int[100];
-        int count = 0;
-        for (int i = 0; i < inputNumbers.length; i++) {
-            inputNumbers[i] = input.nextInt();
-            if (inputNumbers[i] == 0) {
+        int[] count = new int[100];
+
+        for (int i = 0; i < count.length; i++) {
+            int inputNumbers = input.nextInt();
+            if(inputNumbers ==0){
                 break;
             }
-            count++;
-        }
+            count[inputNumbers]++;
 
-        int[] counts = new int[count];
-
-        for (int i = 0; i < count; i++) {
-            counts[inputNumbers[i] % 100]++;
 
         }
-        for (int i = 0; i < count; i++) {
-            System.out.println(inputNumbers[i] + " occur " + counts[i] + " time");
-        }
 
+        for (int i = 0; i < count.length; i++) {
+            if (count[i] > 0) {
+                System.out.println(i + " occur " +count[i] + " " +((count[i]) > 1 ? "times" : "time"));
+            }
+
+
+        }
 
     }
-
 }
