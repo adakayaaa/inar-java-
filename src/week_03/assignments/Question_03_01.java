@@ -15,7 +15,7 @@ public class Question_03_01 {
         double root1 = (-b + (Math.pow((Math.pow(b, 2) - 4 * a * c), 0.5))) / (2 * a);
         double root2 = (-b - (Math.pow((Math.pow(b, 2) - 4 * a * c), 0.5))) / (2 * a);
 
-        final double DISCRIMINANT = Math.pow((Math.pow(b, 2) - 4 * a * c), 0.5);
+        final double DISCRIMINANT = (Math.pow(b, 2) - 4 * a * c);
 
         if (DISCRIMINANT > 0) {
             System.out.println(" The equation has two roots " + root1 + " and " + root2);
