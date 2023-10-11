@@ -7,10 +7,10 @@ public class Question_07_16 {
             random[i] = (int) (Math.random() * 100000 + 1);
         }
         int key = (int) (Math.random() * 100000 + 1);
+        selectionSort(random);
+
 
         System.out.println("Execution time of invoking the linearSearch in milliseconds:  " + linearSearch(random, key));
-
-        selectionSort(random);
 
         System.out.println("Execution time of invoking the binarySearch in milliseconds:  " + binarySearch(random, key));
     }

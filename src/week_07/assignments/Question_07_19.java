@@ -22,9 +22,8 @@ public class Question_07_19 {
 
 
         for (int i = 0; i < list.length - 1; i++) {
-            int min = i;
             for (int j = i + 1; j < list.length; j++) {
-                if (list[min] > list[j]) {
+                if (list[i] > list[j]) {
                     return false;
                 }
 
