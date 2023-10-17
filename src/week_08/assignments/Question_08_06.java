@@ -8,14 +8,10 @@ public class Question_08_06 {
         double[][] matrix1 = createMatrix();
         double[][] matrix2 = createMatrix();
         double[][] multiplyMatrix = multiplyMatrix(matrix1, matrix2);
-        for (int i = 0; i < multiplyMatrix.length; i++) {
-            for (int j = 0; j < multiplyMatrix[0].length; j++) {
-                System.out.print(multiplyMatrix[i][j] + " ");
-            }
-            System.out.println();
+        getNumber(matrix1, matrix2, multiplyMatrix);
 
-        }
     }
+
 
     public static double[][] createMatrix() {
         Scanner input = new Scanner(System.in);
@@ -32,20 +28,29 @@ public class Question_08_06 {
     }
 
     public static double[][] multiplyMatrix(double[][] matrix1, double[][] matrix2) {
+        // double[][] sumMatrix = new double [matrix1.length][matrix2[0].length]
         double[][] sumMatrix = new double[3][3];
-        for (int i = 0; i < matrix1.length; i++) {
-            double total = 0;
-            for (int j = 0; j < matrix1[0].length; j++) {
-                sumMatrix[i][j]  += (matrix1[i][j] * matrix2[i][j]);
+        for (int i = 0; i < sumMatrix.length; i++) {
+            for (int j = 0; j < sumMatrix[0].length; j++) {
+                for (int k = 0; k < matrix2.length; k++) {
+                    sumMatrix[i][j] += (matrix1[i][k] * matrix2[k][j]);
+
+                }
 
             }
-            for (int k = 0; k < sumMatrix[0].length; k++) {
-                sumMatrix[i][k] = total;
 
-            }
         }
         return sumMatrix;
     }
 
+    public static void getNumber(double[][] matrix1, double[][] matrix2, double[][] multiplyMatrix) {
+        int maxRow = Math.max(matrix1.length, matrix2.length);
+
+
+    }
+
 }
+
+
+
 
