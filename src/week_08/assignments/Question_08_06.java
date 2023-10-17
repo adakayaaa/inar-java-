@@ -36,7 +36,7 @@ public class Question_08_06 {
         for (int i = 0; i < matrix1.length; i++) {
             double total = 0;
             for (int j = 0; j < matrix1[0].length; j++) {
-                total += (matrix1[i][i] * matrix2[j][j]);
+                sumMatrix[i][j]  += (matrix1[i][j] * matrix2[i][j]);
 
             }
             for (int k = 0; k < sumMatrix[0].length; k++) {
