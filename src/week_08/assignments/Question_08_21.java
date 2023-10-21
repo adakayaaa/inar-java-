@@ -29,18 +29,19 @@ public class Question_08_21 {
     public static void getCentralCity(double[][] matrix) {
         double[][] coordinateMatrix = new double[1][2];
 
-        double minDistance=0 ;
+        double minDistance = 0;
 
-        for (int i = 0; i <1; i++) {
-            for (int j = i + 1; j < matrix.length; j++) {
-                minDistance += Math.sqrt(Math.pow(matrix[j][0] - matrix[i][0], 2) + Math.pow(matrix[j][1] - matrix[i][1], 2));
-            }
+        for (int i = 1; i < matrix.length; i++) {
+            minDistance += Math.sqrt(Math.pow(matrix[i][0] - matrix[0][0], 2) + Math.pow(matrix[i][1] - matrix[0][1], 2));
         }
+        coordinateMatrix[0][0] = matrix[0][0];
+        coordinateMatrix[0][1] = matrix[0][1];
+
 
         for (int i = 1; i < matrix.length; i++) {
             double distance = 0;
 
-            for (int j = i + 1; j < matrix.length; j++) {
+            for (int j = 0; j < matrix.length; j++) {
                 distance += Math.sqrt(Math.pow(matrix[j][0] - matrix[i][0], 2) + Math.pow(matrix[j][1] - matrix[i][1], 2));
             }
             if (distance < minDistance) {
@@ -49,7 +50,6 @@ public class Question_08_21 {
                 coordinateMatrix[0][1] = matrix[i][1];
 
             }
-            distance = 0;
         }
         System.out.println("The central city is at (" + coordinateMatrix[0][0] + " , " + coordinateMatrix[0][1] + " ) ");
         System.out.println("The total distance to all other cities is " + minDistance);
