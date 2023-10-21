@@ -23,7 +23,7 @@ public class Question_08_24 {
 
         Scanner input = new Scanner(System.in);
         int[][] sudokuMatrix = new int[9][9];
-        
+
         System.out.println("Enter a Sudoku puzzle solution:");
 
         for (int i = 0; i < sudokuMatrix.length; i++) {
