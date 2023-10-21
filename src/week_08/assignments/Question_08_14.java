@@ -143,7 +143,7 @@ public class Question_08_14 {
         for (int i =0; i <matrix.length; i++) {
             int countOfZero = 0;
             int countOfOne = 0;
-            for (int j = matrix [0].length-1; j <=0; j--) {
+            for (int j = matrix [0].length-1; j >= 0; j--) {
                 if (matrix[i][j] == 0) {
                     countOfZero++;
                 } else {

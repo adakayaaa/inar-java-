@@ -6,7 +6,7 @@ public class Question_07_24 {
         shuffleCards(deck);
         int[] pick = new int[4];
         int numberOfPicks = pickFourCards(deck, pick);
-        display(deck);
+        display(pick);
 
         System.out.println("Number of picks " + numberOfPicks);
 

@@ -1,5 +1,6 @@
 package week_07.assignments;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Question_07_32 {
@@ -7,7 +8,7 @@ public class Question_07_32 {
     public static void main(String[] args) {
 
         int[] list = getList();
-        System.out.println("After the partition, the list is " + afterThePartitionList(list));
+        System.out.println("After the partition, the list is " + Arrays.toString(afterThePartitionList(list)));
 
     }
 
@@ -24,23 +25,31 @@ public class Question_07_32 {
     }
     public static  int[] afterThePartitionList(int[]list){
         int count =partition(list);
+        int index=0;
+        int indexMax=0;
+        int indexOfList=0;
         int [] listMin = new int[count];
         int [] listMax= new int[list.length-count];
-        for (int i = 0; i < list.length; i++) {
+        for (int i = 1; i < list.length; i++) {
             if(list[i]<= list[0]){
-               listMin[count-1] = list[i];
+               listMin[index++] = list[i];
             }else{
-                listMax[count+1] = list[i];
+                listMax[indexMax++] = list[i];
             }
         }
-        for (int i = 0; i < list.length; i++) {
-            for (int j = 0; j < listMin.length; j++) {
-                list [j] = listMin [j];
-            }
-            for (int k = 0; k < listMax.length; k++) {
-                list [listMin.length+k] = listMax[k];
+        listMin[index] = list[0];
+        System.out.println(Arrays.toString(listMin));
+        System.out.println(Arrays.toString(listMax));
 
-            }
+        for (int i = 0; i < listMin.length; i++) {
+            list[indexOfList] = listMin[i];
+            indexOfList++;
+
+        }
+
+        for (int i = 0; i < listMax.length; i++) {
+            list[indexOfList] = listMax[i];
+            indexOfList++;
 
         }
 
