@@ -3,7 +3,7 @@ package week_08.assignments;
 import java.util.Scanner;
 
 public class Question_08_34 {
-    //NOT FİNİSHED
+    
     public static void main(String[] args) {
         double[][] matrix = createMatrix(4, 2);
         double[] array = getRightmostLowestPoint(matrix);
