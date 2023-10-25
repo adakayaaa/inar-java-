@@ -3,7 +3,6 @@ package week_08.assignments;
 import java.util.Scanner;
 
 public class Question_08_36 {
-    //not finished
     public static void main(String[] args) {
         String[][] matrix = createMatrix();
         if (isLatinSquare(matrix)) {
@@ -43,25 +42,28 @@ public class Question_08_36 {
     }
 
     public static boolean isLatinSquare(String[][] matrix) {
-        //error is here.
+
 
         for (int i = 0; i < matrix.length; i++) {
-            String control = matrix[i][0];
-            for (int j = 0; j < matrix[0].length - 1; j++) {
-                if (control == matrix[i][j + 1]) {
-                    return false;
+            for (int j = 0; j < matrix.length - 1; j++) {
+                for (int l = j + 1; l < matrix[0].length; l++) {
+                    if (matrix[i][j].equals(matrix[i][l])) {
+                        return false;
+                    }
 
                 }
             }
         }
-        for (int i = 0; i < matrix.length-1; i++) {
-            String control = matrix[i][0];
-            for (int j = 0; j < matrix[0].length ; j++) {
-                if (control == matrix[i+1][j]) {
-                    return false;
+        for (int i = 0; i < matrix.length - 1; i++) {
+            for (int j = 0; j < matrix.length - 1; j++) {
+                for (int l = j + 1; l < matrix[0].length; l++) {
+                    if (matrix[j][i].equals(matrix[l][i])) {
+                        return false;
 
+                    }
                 }
             }
+
         }
         return true;
     }
