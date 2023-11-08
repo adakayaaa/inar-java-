@@ -20,24 +20,31 @@ public class Time {
 
     public Time(long elapsedTime) {
        long totalSecond = elapsedTime/1000;
-        second = (int) (elapsedTime % 60);
-        minute = (int) ((elapsedTime / 60) % 60);
-        hour = (int) ((elapsedTime / 3600) % 24);
+        this.second = (int) (elapsedTime % 60);
+        this.minute = (int) ((elapsedTime / 60) % 60);
+        this.hour = (int) ((elapsedTime / 3600) % 24);
     }
 
     public int getHour() {
-        return hour;
+        return this.hour;
     }
 
     public int getMinute() {
-        return minute;
+        return this.minute;
     }
 
     public int getSecond() {
-        return second;
+        return this.second;
     }
 
     public void setTime(long elapsedTime) {
-       new Time(elapsedTime);
+        this.second = (int) (elapsedTime % 60);
+        this.minute = (int) ((elapsedTime / 60) % 60);
+        this.hour = (int) ((elapsedTime / 3600) % 24);
+    }
+
+    public String toString(){
+        return this.hour +":" +this.minute + ":" +this.second;
+
     }
 }
