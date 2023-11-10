@@ -8,7 +8,7 @@ public class Account {
     private double annualInterestRate;
     private java.util.Date dateCreated;
 
-    Account() {
+    public Account() {
         this.id = 0;
         this.balance = 0;
         this.annualInterestRate = 0;
@@ -16,7 +16,7 @@ public class Account {
 
     }
 
-    Account(int id, double balance) {
+    public Account(int id, double balance) {
         this.id = id;
         this.balance = balance;
        dateCreated = new Date();

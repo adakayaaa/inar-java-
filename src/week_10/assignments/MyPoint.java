@@ -23,7 +23,7 @@ public class MyPoint {
     }
 
     public double distance(MyPoint myPoint) {
-        return Math.sqrt(Math.pow(myPoint.getX() - x,2)+Math.pow(myPoint.getY() - x,2));
+        return Math.sqrt(Math.pow(myPoint.getX() - this.x,2)+Math.pow(myPoint.getY() - this.y,2));
     }
     public double distance(double x,double y) {
         return Math.sqrt(Math.pow(x - this.x,2)+Math.pow(y - this.y,2));
