@@ -87,4 +87,95 @@ public class MyRectangle2D {
         }
         return true;
     }
+    public static MyRectangle2D getRectangle(double[][] matrix){
+        double x1= getMinX(matrix);
+        double x2= getMaxX(matrix);
+        double y1= getMinY(matrix);
+        double y2= getMaxY(matrix);
+        double weight = findWeight(x1,x2);
+        double height = findHeight(y1,y2);
+        double x= findX(x1,x2,weight);
+        double y= findY(y1,y2,height);
+
+        MyRectangle2D myRectangle2D=new MyRectangle2D(x,y,weight,height);
+        return myRectangle2D;
+    }
+    public static double getMinX(double[][] matrix){
+        double min= matrix[0][0];
+
+        for (int i = 1; i < matrix.length; i++) {
+            if(matrix[i][0]<min){
+                min= matrix[i][0];
+            }
+        }
+        return min;
+    }
+    public static double getMaxX(double[][] matrix){
+        double max= matrix[0][0];
+
+        for (int i = 1; i < matrix.length; i++) {
+            if(matrix[i][0]>max){
+                max= matrix[i][0];
+            }
+        }
+        return max;
+    }
+    public static double getMinY(double[][] matrix){
+        double min= matrix[0][1];
+
+        for (int i = 1; i < matrix.length; i++) {
+            if(matrix[i][1]<min){
+                min= matrix[i][1];
+            }
+        }
+        return min;
+    }
+    public static double getMaxY(double[][] matrix){
+        double max= matrix[0][1];
+
+        for (int i = 1; i < matrix.length; i++) {
+            if(matrix[i][1]>max){
+                max= matrix[i][1];
+            }
+        }
+        return max;
+    }
+    public static double findWeight(double minX,double maxX){
+        if((minX>0 && maxX>0)||(minX<0 && maxX>0)){
+            return maxX-minX;
+        }else {
+            return Math.abs(maxX-minX);
+        }
+    }
+    public static double findHeight(double minY,double maxY){
+        if((minY>0 && maxY>0)||(minY<0 && maxY>0)){
+            return maxY-minY;
+        }else {
+            return Math.abs(maxY-minY);
+        }
+    }
+    public static double findX(double minX,double maxX, double weight){
+        if(minX>0 && maxX>0){
+            return weight/2 +minX;
+        }else if(minX<0 && maxX>0){
+            return maxX-weight/2 ;
+        }else{
+            return maxX-weight/2;
+        }
+    }
+    public static double findY(double minY,double maxY, double height){
+        if(minY>0 && maxY>0){
+            return height/2 +minY;
+        }else if(minY<0 && maxY>0){
+            return maxY-height/2 ;
+        }else{
+            return maxY-height/2;
+        }
+    }
+
+
+
+
+
+
 }
