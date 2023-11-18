@@ -65,5 +65,11 @@ public class Loan {
         double totalPayment = getMonthlyPayment()*numberOfYears*12;
         return totalPayment;
     }
+    public String toString(){
+        return "Annual interest rate: " + annualInterestRate +
+                "\nNumber Of Years: " +numberOfYears +
+                "\nLoan Amount: " + loanAmount+
+                "\nLoan Date: " +loanDate;
+    }
 
 }

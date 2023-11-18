@@ -34,9 +34,9 @@ public class CircleFromSimpleGeometricObject
         return 2 * radius * Math.PI;
     }
 
-    public void printCircle() {
-        System.out.println("The circle is created " + super.getDateCreated() +
-                " and the radius is " + radius);
+    public String toString() {
+        return "The circle is created " + super.getDateCreated() +
+                "\nand the radius is " + radius;
     }
 
 }
