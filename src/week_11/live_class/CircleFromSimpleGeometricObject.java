@@ -13,9 +13,9 @@ public class CircleFromSimpleGeometricObject
     }
 
     public CircleFromSimpleGeometricObject(double radius, String color, boolean filled) {
+        super(color, filled);
         this.radius = radius;
-        setColor(color);
-        setFilled(filled);
+
     }
 
     public void setRadius(double radius) {
@@ -35,7 +35,7 @@ public class CircleFromSimpleGeometricObject
     }
 
     public void printCircle() {
-        System.out.println("The circle is created " + getDateCreated() +
+        System.out.println("The circle is created " + super.getDateCreated() +
                 " and the radius is " + radius);
     }
 

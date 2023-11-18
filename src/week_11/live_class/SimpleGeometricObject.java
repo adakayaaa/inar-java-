@@ -9,10 +9,11 @@ public class SimpleGeometricObject {
 
     public SimpleGeometricObject(){
         dateCreated = new Date();
+        this.color ="white";
     }
     public SimpleGeometricObject(String color,boolean filled){
         dateCreated= new Date();
-        this.color= "white";
+        this.color= color;
         this.filled=filled;
 
     }
