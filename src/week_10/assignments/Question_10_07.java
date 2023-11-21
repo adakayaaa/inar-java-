@@ -10,7 +10,7 @@ public class Question_10_07 {
 
         Account[] accounts = new Account[10];
         for (int i = 0; i < accounts.length; i++) {
-            accounts[i] = new Account(i, 100);
+            accounts[i] = new Account(i, 100,50);
         }
         while (accounts.length == 10) {
             System.out.println("Enter an id: ");

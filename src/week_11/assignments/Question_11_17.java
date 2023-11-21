@@ -17,21 +17,35 @@ public class Question_11_17 {
     public static double getN(int number) {
         double n = 1;
         ArrayList<Integer> list = new ArrayList<>();
-        int possibleGcd =2;
+        int possibleGcd = 2;
 
-        while(possibleGcd<=number) {
+        while (possibleGcd <= number) {
             if (number % possibleGcd == 0) {
-                list.add(number);
+                list.add(possibleGcd);
                 number = number / possibleGcd;
 
             } else {
                 possibleGcd++;
             }
         }
-        for (int i = 0; i < list.size() - 1; i++) {
-            if (list.get(i).equals(list.get(i + 1))) {
-                n *= list.get(i);
+        ArrayList<Integer> list1 = new ArrayList<>();
+        int count = 0;
+        for (int i = 0; i < list.size()-1; i++) {
+            if (!list1.contains(list.get(i))) {
+                list1.add(list.get(i));
+            } else {
+                count++;
+                if (count % 2 != 0) {
+                    list1.remove(list.get(i));
+
+                }
             }
+            if(!list.get(i).equals(list.get(i+1))){
+                count=0;
+            }
+        }
+        for (int i = 0; i < list1.size(); i++) {
+            n*= list1.get(i);
         }
         return n;
     }

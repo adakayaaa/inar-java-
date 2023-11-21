@@ -17,8 +17,8 @@ public class CheckingAccount extends Account {
 
     }
 
-    public CheckingAccount(int id, double balance, double overdraftLimit) {
-        super(id, balance);
+    public CheckingAccount(int id, double balance,double annualInterestRate, double overdraftLimit) {
+        super(id, balance,annualInterestRate);
         this.overdraftLimit = overdraftLimit;
     }
 

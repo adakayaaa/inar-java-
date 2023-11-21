@@ -16,9 +16,10 @@ public class Account {
 
     }
 
-    public Account(int id, double balance) {
+    public Account(int id, double balance,double annualInterestRate) {
         this.id = id;
         this.balance = balance;
+        this.annualInterestRate=annualInterestRate;
        dateCreated = new Date();
     }
 

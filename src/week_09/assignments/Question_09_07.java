@@ -2,7 +2,7 @@ package week_09.assignments;
 
 public class Question_09_07 {
     public static void main(String[] args) {
-        Account account = new Account(1122,20500.00);
+        Account account = new Account(1122,20500.00,4.5);
         System.out.println("         Account Statement        ");
         System.out.println("------------------------------------");
         System.out.println("Account ID  : " +  account.getId());
