@@ -11,13 +11,15 @@ public class Question_11_17 {
         System.out.println("Enter an integer m: ");
         int m = input.nextInt();
 
-        System.out.println("The smallest number n for m*n to be a perfect square is " + getN(m));
+        System.out.println(""+getN(m));
+        System.out.println(m*getN(m)  );
     }
 
     public static double getN(int number) {
         double n = 1;
         ArrayList<Integer> list = new ArrayList<>();
         int possibleGcd = 2;
+        int numberOriginal=number;
 
         while (possibleGcd <= number) {
             if (number % possibleGcd == 0) {
@@ -28,26 +30,18 @@ public class Question_11_17 {
                 possibleGcd++;
             }
         }
-        ArrayList<Integer> list1 = new ArrayList<>();
-        int count = 0;
-        for (int i = 0; i < list.size()-1; i++) {
-            if (!list1.contains(list.get(i))) {
-                list1.add(list.get(i));
-            } else {
-                count++;
-                if (count % 2 != 0) {
-                    list1.remove(list.get(i));
-
-                }
-            }
-            if(!list.get(i).equals(list.get(i+1))){
-                count=0;
+        int[] listArray=new int[numberOriginal/2];
+        for (int i = 0; i < list.size(); i++) {
+            listArray[list.get(i)]++;
+        }
+        for (int i = 0; i < listArray.length; i++) {
+            if(listArray[i]%2==1){
+                n*=i;
             }
         }
-        for (int i = 0; i < list1.size(); i++) {
-            n*= list1.get(i);
-        }
-        return n;
+      return n;
     }
 
+
 }
+
