@@ -9,10 +9,14 @@ public class Loan {
     private java.util.Date loanDate;
 
     public Loan(double annualInterestRate, int numberOfYears, double loanAmount) {
-        this.annualInterestRate = annualInterestRate;
-        this.numberOfYears = numberOfYears;
-        this.loanAmount = loanAmount;
-        loanDate = new Date();
+        if (annualInterestRate <= 0 || numberOfYears <= 0 || loanAmount <= 0) {
+            throw new IllegalArgumentException(" Wrong input! Please greater than 0!");
+        } else {
+            this.annualInterestRate = annualInterestRate;
+            this.numberOfYears = numberOfYears;
+            this.loanAmount = loanAmount;
+            loanDate = new Date();
+        }
     }
 
     public Loan() {
@@ -25,7 +29,11 @@ public class Loan {
     }
 
     public void setAnnualInterestRate(double annualInterestRate) {
-        this.annualInterestRate = annualInterestRate;
+        if (annualInterestRate <= 0) {
+            throw new IllegalArgumentException(" Wrong input! Please greater than 0!");
+        } else {
+            this.annualInterestRate = annualInterestRate;
+        }
     }
 
     public int getNumberOfYears() {
@@ -33,7 +41,11 @@ public class Loan {
     }
 
     public void setNumberOfYears(int numberOfYears) {
-        this.numberOfYears = numberOfYears;
+        if (numberOfYears <= 0) {
+            throw new IllegalArgumentException(" Wrong input! Please greater than 0!");
+        } else {
+            this.numberOfYears = numberOfYears;
+        }
     }
 
     public double getLoanAmount() {
@@ -41,7 +53,11 @@ public class Loan {
     }
 
     public void setLoanAmount(double loanAmount) {
-        this.loanAmount = loanAmount;
+        if (loanAmount <= 0) {
+            throw new IllegalArgumentException(" Wrong input! Please greater than 0!");
+        } else {
+            this.loanAmount = loanAmount;
+        }
     }
 
     public Date getLoanDate() {
@@ -61,15 +77,16 @@ public class Loan {
     }
 
     //Find total payment
-    public double getTotalPayment(){
-        double totalPayment = getMonthlyPayment()*numberOfYears*12;
+    public double getTotalPayment() {
+        double totalPayment = getMonthlyPayment() * numberOfYears * 12;
         return totalPayment;
     }
-    public String toString(){
+
+    public String toString() {
         return "Annual interest rate: " + annualInterestRate +
-                "\nNumber Of Years: " +numberOfYears +
-                "\nLoan Amount: " + loanAmount+
-                "\nLoan Date: " +loanDate;
+                "\nNumber Of Years: " + numberOfYears +
+                "\nLoan Amount: " + loanAmount +
+                "\nLoan Date: " + loanDate;
     }
 
 }
