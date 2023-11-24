@@ -9,6 +9,7 @@ public class Hex2Dec {
         System.out.print("Enter a hex number: ");
         String hex = input.nextLine();
 
+
         System.out.println(" The decimal value for hex number " + hex + " is " + hexToDecimal(hex.toUpperCase()));
     }
 

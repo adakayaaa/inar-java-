@@ -1,9 +1,11 @@
 package week_11.assignments;
 
+import week_12.assignments.IllegalTriangleException;
+
 import java.util.Scanner;
 
 public class Question_11_01 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalTriangleException {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter three side of the triangle: ");
         double side1 = input.nextDouble();

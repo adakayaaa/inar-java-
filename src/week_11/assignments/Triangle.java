@@ -1,5 +1,7 @@
 package week_11.assignments;
 
+import week_12.assignments.IllegalTriangleException;
+
 public class Triangle extends GeometricObject{
     private double side1;
     private double side2;
@@ -11,10 +13,14 @@ public class Triangle extends GeometricObject{
       this.side3=1.0;
 
     }
-    Triangle(double side1,double side2,double side3){
-        this.side1=side1;
-        this.side2=side2;
-        this.side3=side3;
+    public Triangle(double side1,double side2,double side3) throws IllegalTriangleException {
+        if ((side1 + side2 > side3) && (side1 + side3 > side2) && (side2 + side3 > side2)) {
+            this.side1 = side1;
+            this.side2 = side2;
+            this.side3 = side3;
+        } else {
+            throw new IllegalTriangleException(side1, side2, side3);
+        }
     }
 
     public double getSide1() {
