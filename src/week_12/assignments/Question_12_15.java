@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class Question_12_15 {
     public static void main(String[] args) throws FileNotFoundException {
+
+        //SortList.txt
         String fileName = "SortList.txt";
         File file = new File("C:\\Users\\ASUS\\workspace\\inar-java\\src\\week_12\\assignments\\" + fileName);
 
