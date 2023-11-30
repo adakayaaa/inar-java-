@@ -18,3 +18,4 @@ public class RandomCharacter {
         return getRandomCharacter('\u0000', '\uFFFF');
     }
 }
+

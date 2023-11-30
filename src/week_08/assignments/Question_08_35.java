@@ -78,3 +78,4 @@ public class Question_08_35 {
         System.out.println("The maximum square submatrix is at (" + array[0] + " , " + array[1] + ") with size " + array[2]);
     }
 }
+

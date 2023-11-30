@@ -17,3 +17,4 @@ public class FutureTuition {
         System.out.printf("Tuition will be $%2f in %1d years" , tuition ,year);
     }
 }
+

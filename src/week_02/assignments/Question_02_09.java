@@ -13,3 +13,4 @@ public class Question_02_09 {
         System.out.println(" The average acceleration is " + average);
     }
 }
+

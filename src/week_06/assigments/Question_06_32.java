@@ -46,3 +46,4 @@ public class Question_06_32 {
         System.out.println("Number of winning games: " + countWin);
     }
 }
+

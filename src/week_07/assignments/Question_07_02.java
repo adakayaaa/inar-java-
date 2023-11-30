@@ -20,5 +20,3 @@ public class Question_07_02 {
     }
 }
 
-
-

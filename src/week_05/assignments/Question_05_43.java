@@ -16,3 +16,4 @@ public class Question_05_43 {
         System.out.println("The total number of all combinaitons is " +count);
     }
 }
+

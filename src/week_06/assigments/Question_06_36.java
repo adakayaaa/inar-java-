@@ -19,3 +19,4 @@ public class Question_06_36 {
         return area;
     }
 }
+

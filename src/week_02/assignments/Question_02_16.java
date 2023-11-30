@@ -15,3 +15,4 @@ public class Question_02_16 {
         System.out.println("The area of the hexagon is " + area);
     }
 }
+

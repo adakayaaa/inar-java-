@@ -18,3 +18,4 @@ public class TestMax {
         return result;
     }
 }
+

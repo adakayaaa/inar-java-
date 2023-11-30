@@ -17,3 +17,4 @@ public class Question_10_28 {
         System.out.println("Substring of myString2 index 5 --> " + myString2.toString());
     }
 }
+

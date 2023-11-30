@@ -69,5 +69,3 @@ public class Question_08_36 {
     }
 }
 
-
-

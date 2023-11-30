@@ -12,3 +12,4 @@ public class Question_12_04 extends Loan {
         System.out.println(loan.toString());
     }
 }
+

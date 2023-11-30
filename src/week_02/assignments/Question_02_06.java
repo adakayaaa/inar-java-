@@ -20,3 +20,4 @@ public class Question_02_06 {
         System.out.println("The sum of the digits is " + sumOfTheDigit);
     }
 }
+

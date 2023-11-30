@@ -30,3 +30,4 @@ public class Question_11_05 {
         System.out.println("Number of students: " + course.getNumberOfStudents());
     }
 }
+

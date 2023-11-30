@@ -16,3 +16,4 @@ public class Question_05_48 {
         System.out.println(charactersAtOddPosition);
     }
 }
+

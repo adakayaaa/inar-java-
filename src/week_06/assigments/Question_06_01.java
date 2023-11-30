@@ -22,3 +22,4 @@ public class Question_06_01 {
         return number;
     }
 }
+

@@ -59,3 +59,4 @@ public class RegularPolygon {
         return ((n*side*side)/(4*Math.tan(Math.PI/n)));
     }
 }
+

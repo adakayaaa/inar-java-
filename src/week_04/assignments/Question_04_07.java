@@ -31,3 +31,4 @@ public class Question_04_07 {
         System.out.println( "(" + x5 + "," +y5 + ")" ) ;
     }
 }
+

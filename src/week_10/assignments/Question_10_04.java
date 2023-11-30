@@ -12,3 +12,4 @@ public class Question_10_04 {
         System.out.println(myPoint.distance(10,30.5));
     }
 }
+

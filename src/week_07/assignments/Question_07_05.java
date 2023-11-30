@@ -22,3 +22,4 @@ public class Question_07_05 {
         System.out.println("The distinct numbers are" + distinctNumbers);
     }
 }
+

@@ -33,3 +33,4 @@ public class GeometricObject {
                 " and filled: " + isEmpty;
     }
 }
+

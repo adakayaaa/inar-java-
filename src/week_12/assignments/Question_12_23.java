@@ -16,19 +16,28 @@ public class Question_12_23 {
 
         ArrayList<Number> list = new ArrayList<>();
 
-        String[] faculty = new String[1000];
+        String[][] faculty = new String[1000][4];
         String[] rank = {"assistant", "associate", "full"};
         for (int i = 0; i < faculty.length; i++) {
             String firstName = "FirstName" + (i+1);
             String lastName = "LastName" + (i+1);
             String rankName= getRank(rank);
             Double salary=((int)(getSalary(getRank(rank))*100)/100.0);
-            faculty[i]= (firstName+"           "+lastName +"       " + rankName + "          " +salary);
-        }
+                faculty[i][0]=firstName;
+                faculty[i][1]= lastName;
+                faculty[i][2]= rankName;
+                faculty[i][3]= salary+" ";
+            }
+
 
         String str= "";
         for (int i = 0; i < faculty.length; i++) {
-            str+= faculty[i] +"\n";
+            for (int j = 0; j < faculty[0].length ; j++) {
+                str+= faculty[i][j]+"   " ;
+                if(j==3){
+                    str +="\n";
+                }
+            }
         }
         PrintWriter output= new PrintWriter(file);
         output.println(str);
@@ -54,3 +63,4 @@ public class Question_12_23 {
 
 
 }
+

@@ -12,3 +12,4 @@ public class Question_05_24 {
         System.out.println("Sum of series: " + sum);
     }
 }
+

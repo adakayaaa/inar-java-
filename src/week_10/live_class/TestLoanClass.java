@@ -20,3 +20,4 @@ public class TestLoanClass {
         System.out.println("The loan was created on " + loan.getLoanDate());
     }
 }
+

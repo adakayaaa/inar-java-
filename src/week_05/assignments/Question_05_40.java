@@ -17,3 +17,4 @@ public class Question_05_40 {
         System.out.println("Fipping a coin one million times.. \nHeads: " +heads + "\nTails: " + tails );
     }
 }
+

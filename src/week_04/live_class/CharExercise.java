@@ -35,3 +35,4 @@ public class CharExercise {
         System.out.println("Chapter " + '2'); //Chapter 2
     }
 }
+

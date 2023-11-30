@@ -23,5 +23,3 @@ public class Question_05_06 {
 
 }
 
-
-

@@ -27,3 +27,4 @@ public class Question_07_13 {
         return random;
     }
 }
+

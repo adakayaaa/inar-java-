@@ -33,3 +33,4 @@ public class Question_07_11 {
         return Math.sqrt(deviationOfNumber / 9);
     }
 }
+

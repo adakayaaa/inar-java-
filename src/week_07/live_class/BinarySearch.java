@@ -25,3 +25,4 @@ public class BinarySearch {
         //Now, high<low, key not found,if u want you add the key in this number
     }
 }
+

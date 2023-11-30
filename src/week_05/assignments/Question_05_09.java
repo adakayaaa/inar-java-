@@ -36,3 +36,4 @@ public class Question_05_09 {
         System.out.println("Student with the second highest score: " + nameSecondHighestStudent);
     }
 }
+

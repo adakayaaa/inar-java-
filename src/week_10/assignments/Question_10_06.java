@@ -26,3 +26,4 @@ public class Question_10_06 {
         return true;
     }
 }
+

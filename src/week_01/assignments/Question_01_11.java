@@ -1,3 +1,5 @@
+package week_01.assignments;
+
 public class Question_01_11 {
     public static void main (String [] args ) {
         System.out.println ("Population projection" );
@@ -21,3 +23,4 @@ public class Question_01_11 {
         System.out.println((((365.0*5*24*60*60)*(13*52-45*7))/(45*7*13))+312032486);
     }
 }
+

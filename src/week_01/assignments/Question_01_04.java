@@ -1,3 +1,5 @@
+package week_01.assignments;
+
 public class Question_01_04 {
     public static void main(String[] args ) {
         System.out.println("a a^2 a^3 ");
@@ -7,3 +9,4 @@ public class Question_01_04 {
         System.out.println("4 16  64");
     }
 }
+

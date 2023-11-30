@@ -11,3 +11,4 @@ public class Question_09_08 {
         System.out.println(fan1.toString());
     }
 }
+

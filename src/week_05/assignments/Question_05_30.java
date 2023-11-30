@@ -24,3 +24,4 @@ public class Question_05_30 {
         System.out.println("Amount in savings account after " + month + " months " + (int) (amount * 100) / 100.0);
     }
 }
+

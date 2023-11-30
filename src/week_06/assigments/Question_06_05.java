@@ -34,3 +34,4 @@ public class Question_06_05 {
         System.out.println(min + " " + mid + " " + max);
     }
 }
+

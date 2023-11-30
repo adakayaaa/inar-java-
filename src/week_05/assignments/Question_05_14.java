@@ -26,3 +26,4 @@ public class Question_05_14 {
         System.out.println("The greatest common divisor for " + number1 + " and " + number2 + " is " + greatCommonDivisor);
     }
 }
+

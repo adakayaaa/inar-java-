@@ -17,3 +17,4 @@ public class SentinelValue {
         System.out.println("The sum is " + sum);
     }
 }
+

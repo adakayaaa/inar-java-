@@ -39,3 +39,4 @@ public class Question_06_26 {
         return true;
     }
 }
+

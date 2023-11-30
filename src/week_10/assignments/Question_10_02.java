@@ -7,3 +7,4 @@ public class Question_10_02 {
         System.out.println("BMI  : " + bmi.getBMI()+" " + bmi.getStatus());
     }
 }
+

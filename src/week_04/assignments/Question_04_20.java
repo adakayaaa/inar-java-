@@ -13,3 +13,4 @@ public class Question_04_20 {
         System.out.println("First character of the string: " + sentence.substring(0,1));
     }
 }
+

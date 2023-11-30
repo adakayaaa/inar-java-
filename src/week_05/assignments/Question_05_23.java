@@ -16,3 +16,4 @@ public class Question_05_23 {
         System.out.println("Summation of series right to left-Summation os series left to right: " + (sum2 - sum1));
     }
 }
+

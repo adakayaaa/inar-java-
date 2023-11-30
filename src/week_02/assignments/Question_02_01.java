@@ -1,3 +1,5 @@
+package week_02.assignments;
+
 
 
 import java.util.Scanner;
@@ -17,3 +19,4 @@ public class Question_02_01 {
 
     }
 }
+

@@ -51,3 +51,4 @@ public class MyStringBuilder2 {
         return this.str.toString();
     }
 }
+

@@ -5,3 +5,4 @@ public class BinaryFormatException extends Exception {
         super("It's not a binary string!");
     }
 }
+

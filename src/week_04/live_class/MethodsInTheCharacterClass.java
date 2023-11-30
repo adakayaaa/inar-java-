@@ -24,3 +24,4 @@ public class MethodsInTheCharacterClass {
         System.out.println("Convert T to lowercase: " + Character.toLowerCase('T')); //Convert T to lowercase t
     }
 }
+

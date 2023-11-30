@@ -18,3 +18,4 @@ public class Question_02_15 {
         System.out.println("The distance between the two points is " + distanceOfTwoPoints);
     }
 }
+

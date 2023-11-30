@@ -13,3 +13,4 @@ public class TestCircleWithCustomException {
         System.out.println("Number of objects created: " + CircleWithCustomException.getNumberOfObjects());
     }
 }
+

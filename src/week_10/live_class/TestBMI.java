@@ -6,3 +6,4 @@ public class TestBMI {
         System.out.println("The BMI for " + bmi.getName() + " is " + bmi.getBMI() + " " + bmi.getStatus());
     }
 }
+

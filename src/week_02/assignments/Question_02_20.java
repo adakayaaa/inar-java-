@@ -15,3 +15,4 @@ public class Question_02_20 {
         System.out.println("The interest is " + interestRate);
     }
 }
+

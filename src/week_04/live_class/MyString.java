@@ -44,3 +44,4 @@ public class MyString {
         System.out.println("The character entered is " + ch);
     }
 }
+

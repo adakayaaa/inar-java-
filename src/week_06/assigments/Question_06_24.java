@@ -121,4 +121,3 @@ public class Question_06_24 {
 
 }
 
-

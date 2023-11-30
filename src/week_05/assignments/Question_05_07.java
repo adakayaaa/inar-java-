@@ -20,3 +20,4 @@ public class Question_05_07 {
         System.out.println("Total cost four years' worth of tuition after the tenth year: " + (totalCost));
     }
 }
+

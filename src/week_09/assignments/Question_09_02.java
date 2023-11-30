@@ -8,3 +8,4 @@ public class Question_09_02 {
         System.out.println("Price-change percentage: " +stock.getChangePercent(34.35,34.5) );
     }
 }
+

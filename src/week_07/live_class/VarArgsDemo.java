@@ -19,3 +19,4 @@ public class VarArgsDemo {
         System.out.println("The max value is: " + result);
     }
 }
+

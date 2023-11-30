@@ -28,3 +28,4 @@ public class ComparisonMethods {
         System.out.println("Welcome to java".contains("To")); //false
     }
 }
+

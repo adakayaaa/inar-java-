@@ -45,5 +45,3 @@ public class Question_12_07 {
     }
 }
 
-
-

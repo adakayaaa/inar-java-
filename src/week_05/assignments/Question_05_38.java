@@ -28,3 +28,4 @@ public class Question_05_38 {
         System.out.println(" The octal of " + number + " is " + output);
     }
 }
+

@@ -23,3 +23,4 @@ public class Question_06_10 {
         return true;
     }
 }
+

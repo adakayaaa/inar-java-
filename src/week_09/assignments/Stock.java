@@ -45,3 +45,4 @@ public class Stock {
       return (100*(currentPrice-previousClosingPrice))/currentPrice;
     }
 }
+

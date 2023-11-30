@@ -19,3 +19,4 @@ public class Question_02_17 {
         System.out.println("The wind chill index is " + windChillTemperature);
     }
 }
+

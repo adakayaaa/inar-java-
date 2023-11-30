@@ -13,3 +13,4 @@ public class TestArrayListMethods {
         System.out.println(java.util.Collections.min(list));
     }
 }
+

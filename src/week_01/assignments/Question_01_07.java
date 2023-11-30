@@ -1,3 +1,5 @@
+package week_01.assignments;
+
 public class Question_01_07 {
     public static void main ( String [] args ) {
         System.out.println ("π1 = " ) ;
@@ -7,3 +9,4 @@ public class Question_01_07 {
 
     }
 }
+

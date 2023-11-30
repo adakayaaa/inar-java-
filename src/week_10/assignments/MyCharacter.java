@@ -56,3 +56,4 @@ public class MyCharacter {
         return String.valueOf(character);
     }
 }
+

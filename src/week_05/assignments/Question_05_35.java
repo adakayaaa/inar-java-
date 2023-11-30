@@ -10,3 +10,4 @@ public class Question_05_35 {
         System.out.println("The sum of the serie is " + sum);
     }
 }
+

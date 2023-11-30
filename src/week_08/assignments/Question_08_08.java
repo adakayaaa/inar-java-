@@ -65,3 +65,4 @@ public class Question_08_08 {
         System.out.println("Their distance is " + minDistance);
     }
 }
+

@@ -47,5 +47,3 @@ public class Question_07_14 {
     }
 }
 
-
-

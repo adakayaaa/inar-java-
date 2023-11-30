@@ -19,3 +19,4 @@ public class Question_06_04 {
         System.out.print(output);
     }
 }
+

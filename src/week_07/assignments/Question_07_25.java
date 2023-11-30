@@ -38,6 +38,3 @@ public class Question_07_25 {
 
 }
 
-
-
-
