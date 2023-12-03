@@ -4,10 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
-
-//STH İS WRONG!
 
 public class Question_12_26 {
     public static void main(String[] args) throws FileNotFoundException {
@@ -37,40 +34,53 @@ public class Question_12_26 {
 
         for (int i = 0; i < files.size(); i++) {
             Scanner input = new Scanner(files.get(i));
-            String str = "";
 
-            String absolutePath = files.get(i).getAbsolutePath();
-            String[] allAbsolutePathArray = absolutePath.split("question_12_26\\\\");
+            StringBuilder stringBuilder1 = new StringBuilder();
 
-            if (allAbsolutePathArray[1].startsWith("Question") && allAbsolutePathArray[1].endsWith(".java")) {
-                String[] formatAboutName = allAbsolutePathArray[1].split("[_.java]");
+            while (input.hasNext()) {
+                String str = input.next() ;
+                if (str.contains("Question_")) {
+                    String s2=  getName(str);
+                    stringBuilder1.append(s2+" ");
 
-                StringBuilder stringBuilder = new StringBuilder(formatAboutName[1]);
-                if (stringBuilder.length() == 1) {
-                    stringBuilder.insert(0, "0");
+                } else {
+                    stringBuilder1.append(str+ " ");
                 }
-
-                StringBuilder stringBuilderForPartTwo = new StringBuilder(formatAboutName[2]);
-                if (stringBuilderForPartTwo.length() == 1) {
-                    stringBuilderForPartTwo.insert(0, "0");
-                }
-
-                String name = stringBuilder + "_" + stringBuilderForPartTwo;
-                System.out.println(name);
-                while (input.hasNext()) {
-                    str += input.nextLine() + "\n";
-                    if(str.contains("public class Question_")) {
-                        str = "public class Question_" +name;
-                    }
-                }
-                PrintWriter output=new PrintWriter(files.get(i));
-                output.println(str);
-                output.close();
-
-
             }
+            PrintWriter output = new PrintWriter(files.get(i));
+            output.println(stringBuilder1);
+            output.close();
+
+
+
 
         }
+
+
+    }
+    public static String getName(String s1){
+
+       s1= s1.replace("Question_","");
+        String[] numbers = s1.split("_");
+
+        String result= "Question_";
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i]= numbers[i].trim();
+            if ((numbers[i].length() == 1)) {
+                result += "0" + numbers[i];
+                if (i == 0) {
+                    result += "_";
+                }
+            } else {
+                result += numbers[i];
+                if (i == 0) {
+                    result += "_";
+                }
+            }
+        }
+
+        return result;
     }
 }
+
 
