@@ -1,7 +1,6 @@
 package week_13.assignments;
 
 import week_11.live_class.SimpleGeometricObject;
-import week_13.live_class.GeometricObject;
 
 public class Rectangle extends GeometricObject {
 
@@ -51,8 +50,13 @@ public class Rectangle extends GeometricObject {
     public double getPerimeter() {
         return 2 * (this.width + this.height);
     }
+
     public String toString() {
-        return "The rectangle's area is " + this.getArea();
+        return super.toString() +
+                "\nHeight :" + this.getHeight() +
+                "\nWidth : " + this.getWidth() +
+                "\nThe rectangle's perimeter is " + this.getPerimeter() +
+                "\nThe rectangle's area is " + this.getArea();
     }
 
 

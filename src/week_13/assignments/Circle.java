@@ -1,7 +1,5 @@
 package week_13.assignments;
 
-import week_13.live_class.GeometricObject;
-
 public class Circle extends GeometricObject {
     private double radius;
 
@@ -38,7 +36,10 @@ public class Circle extends GeometricObject {
     }
 
     public String toString() {
-        return "The circle's area is " + this.getArea() ;
+        return super.toString() +
+                "\nRadius: " + this.getRadius()+
+                "\nThe circle's perimeter is " + this.getPerimeter() +
+                "\nThe circle's area is " + this.getArea() ;
     }
 }
 

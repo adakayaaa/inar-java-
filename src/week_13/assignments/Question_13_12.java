@@ -1,6 +1,6 @@
 package week_13.assignments;
 
-import week_13.live_class.GeometricObject;
+import week_13.assignments.GeometricObject;
 
 import java.util.Arrays;
 

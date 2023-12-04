@@ -1,8 +1,9 @@
-package week_13.live_class;
+package week_13.assignments;
 
 import java.util.Date;
 
-public abstract class GeometricObject implements Comparable<GeometricObject> {
+
+public abstract class GeometricObject {
     private String color = "white";
     private boolean filled;
     private java.util.Date dateCreated;
@@ -48,17 +49,28 @@ public abstract class GeometricObject implements Comparable<GeometricObject> {
     @Override
     public String toString() {
         return "created on " + dateCreated + "\ncolor: " + color +
-                " and filled: " + filled;
+                "\nand filled: " + filled;
     }
 
-    public int compareTo(GeometricObject geometricObject){
-        if(this.getArea()>geometricObject.getArea()){
+    public int compareTo(week_13.assignments.GeometricObject geometricObject) {
+        if (this.getArea() > geometricObject.getArea()) {
             return 1;
-        } else if (this.getArea()==geometricObject.getArea()) {
+        } else if (this.getArea() == geometricObject.getArea()) {
             return 0;
-        }else{
+        } else {
             return -1;
         }
     }
+
+    public String max(GeometricObject geometricObject1){
+        if (geometricObject1.getArea() > this.getArea()) {
+            return geometricObject1.toString();
+        } else if (geometricObject1.getArea() <this.getArea()) {
+            return this.toString();
+        } else {
+            return this.toString();
+        }
+    }
 }
+
 
