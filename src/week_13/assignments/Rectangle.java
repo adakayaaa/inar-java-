@@ -1,8 +1,7 @@
 package week_13.assignments;
 
-import week_11.live_class.SimpleGeometricObject;
 
-public class Rectangle extends GeometricObject {
+public class Rectangle extends GeometricObject implements Comparable<Rectangle> {
 
     private double width;
     private double height;
@@ -59,6 +58,26 @@ public class Rectangle extends GeometricObject {
                 "\nThe rectangle's area is " + this.getArea();
     }
 
+
+    @Override
+    public int compareTo(Rectangle o) {
+        if (this.getArea() > o.getArea()) {
+            return 1;
+        } else if (this.getArea() == o.getArea()) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this.getArea() == ((Rectangle) o).getArea()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 

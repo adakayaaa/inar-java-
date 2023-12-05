@@ -46,6 +46,7 @@ public abstract class GeometricObject {
 
     public abstract double getPerimeter();
 
+
     @Override
     public String toString() {
         return "created on " + dateCreated + "\ncolor: " + color +

@@ -1,6 +1,6 @@
 package week_13.assignments;
 
-public class ComparableCircle extends Circle implements Comparable<ComparableCircle>{
+public class ComparableCircle extends Circle {
     private double radius;
     public ComparableCircle(){
 
@@ -17,6 +17,8 @@ public class ComparableCircle extends Circle implements Comparable<ComparableCir
             return 0;
         }
     }
+
+
     @Override
     public String toString() {
         return super.toString();
