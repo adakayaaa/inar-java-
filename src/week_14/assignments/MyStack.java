@@ -56,7 +56,7 @@ public class MyStack {
     }
 
     public int size() {
-        return this.size();
+        return this.numberList.size();
     }
 
     public boolean isEmpty(){
