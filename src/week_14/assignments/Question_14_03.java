@@ -1,7 +1,4 @@
-package week_14;
-
-import week_14.assignments.CompareY;
-import week_14.assignments.Points;
+package week_14.assignments;
 
 import java.util.ArrayList;
 import java.util.Collections;
