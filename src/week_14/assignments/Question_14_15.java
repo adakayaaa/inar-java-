@@ -26,7 +26,6 @@ public class Question_14_15 {
     }
 
     public static void display(Map<Integer, Integer> list, int numberOfElements) {
-        Set<Integer> keySet = list.keySet();
         ArrayList<Integer> arrayList = new ArrayList<>();
 
         for (int i = 1; i <=numberOfElements ; i++) {
